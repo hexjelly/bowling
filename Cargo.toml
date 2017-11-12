@@ -1,0 +1,16 @@
+[package]
+name = "bowling-scorer"
+version = "0.1.0"
+authors = ["Roger Andersen <hexjelly@hexjelly.com>"]
+
+[lib]
+name = "bowling_scorer"
+path = "src/lib.rs"
+
+[[bin]]
+name = "bowling_scorer"
+path = "src/main.rs"
+
+[dependencies]
+failure = { git = "https://github.com/withoutboats/failure" }
+failure_derive = { git = "https://github.com/withoutboats/failure_derive" }
