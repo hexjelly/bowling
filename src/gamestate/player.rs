@@ -1,4 +1,5 @@
 use super::Frame;
+use super::Throw;
 
 pub struct Player {
     name: String,
@@ -11,5 +12,13 @@ impl Player {
             name: name.into(),
             frames: vec![],
         }
+    }
+
+    pub fn add_frame(&mut self) {
+        self.frames.push(Frame::default())
+    }
+
+    pub fn add_throw(&mut self, throw: Throw) {
+        unimplemented!();
     }
 }
