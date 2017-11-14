@@ -31,6 +31,10 @@ impl GameState {
         unimplemented!();
     }
 
+    pub fn get_scores_as_json(&self) {
+        unimplemented!();
+    }
+
     pub fn add_throw(&self, throw: Throw) {
         unimplemented!();
     }
