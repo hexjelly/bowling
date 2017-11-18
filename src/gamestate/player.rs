@@ -1,4 +1,5 @@
-use super::frame::{Frame, Throw};
+use super::Frame;
+use super::Throw;
 use failure::Error;
 
 #[derive(Debug, Fail)]
