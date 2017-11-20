@@ -8,10 +8,17 @@ enum ThrowParseError {
 }
 
 #[derive(Debug, Eq, PartialEq)]
-pub enum Throw {
-    Regular(u8, Vec<bool>),
-    Strike(u8, Vec<bool>),
-    Spare(u8, Vec<bool>),
+pub enum ThrowType {
+    Regular,
+    Strike,
+    Spare,
+}
+
+#[derive(Debug, Eq, PartialEq)]
+pub struct Throw {
+    throw_type: ThrowType,
+    pin_count: u8,
+    pin_state: Vec<bool>,
 }
 
 impl Throw {
@@ -32,7 +39,11 @@ impl Throw {
         } else if pin_state.as_ref().unwrap().len() != 10 {
             Err(ThrowParseError::InvalidPinAmount { pins: pin_state.unwrap().len() }.into())
         } else {
-            Ok(Throw::Regular(pin_count, pin_state.unwrap()))
+            Ok(Throw {
+                throw_type: ThrowType::Regular,
+                pin_count: pin_count,
+                pin_state: pin_state.unwrap(),
+            })
         }
     }
 }
