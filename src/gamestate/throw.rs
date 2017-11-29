@@ -7,7 +7,7 @@ enum ThrowParseError {
     InvalidPinAmount { pins: usize },
 }
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq)]
 pub enum ThrowType {
     Regular,
     Strike,
@@ -45,5 +45,17 @@ impl Throw {
                 pin_state: pin_state.unwrap(),
             })
         }
+    }
+
+    pub fn set_throw_type(&mut self, throw_type: ThrowType) {
+        self.throw_type = throw_type;
+    }
+
+    pub fn get_throw_type(&self) -> &ThrowType {
+        &self.throw_type
+    }
+
+    pub fn get_pin_count(&self) -> u8 {
+        self.pin_count
     }
 }

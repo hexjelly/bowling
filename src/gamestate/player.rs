@@ -21,6 +21,12 @@ pub struct Player {
     frames: Vec<Frame>,
 }
 
+impl<'a> From<&'a str> for Player {
+    fn from(name: &'a str) -> Self {
+        Player::new(name)
+    }
+}
+
 impl Player {
     pub fn new<S: Into<String>>(name: S) -> Player {
         Player {

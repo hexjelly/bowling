@@ -11,15 +11,15 @@ impl Frame {
         Frame::default()
     }
 
-    pub fn with_throws(throws: &[Throw]) -> Frame {
+    pub fn with_throws(_throws: &[Throw]) -> Frame {
         unimplemented!();
     }
 
-    fn calculate_score(&self, next_frames: &[&Frame]) -> Option<u32> {
+    pub fn calculate_score(&self, _next_frames: &[&Frame]) -> Option<u32> {
         unimplemented!();
     }
 
-    pub(crate) fn add_throw(&mut self, throw: Throw) {
+    pub fn add_throw(&mut self, _throw: Throw) {
         unimplemented!();
     }
 }

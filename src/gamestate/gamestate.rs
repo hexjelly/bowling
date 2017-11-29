@@ -2,8 +2,9 @@ use super::Player;
 use super::Throw;
 
 pub enum CatchupHandling {
-    Disabled, /* Quick,
-               * Gradual, */
+    Disabled,
+    Quick,
+    Gradual,
 }
 
 impl Default for CatchupHandling {
@@ -31,15 +32,27 @@ impl GameState {
         unimplemented!();
     }
 
-    pub fn get_scores_as_json(&self) {
+    pub fn get_score_as_json(&self) {
         unimplemented!();
     }
 
-    pub fn add_throw(&self, throw: Throw) {
+    pub fn add_player<P: Into<Player>>(&mut self, player: P) {
+        self.players.push(player.into());
+    }
+
+    pub fn add_throw(&self, _throw: Throw) {
         unimplemented!();
     }
 
     pub fn get_turn(&self) -> String {
         unimplemented!();
+    }
+
+    pub fn set_catchup_handling(&mut self, catchup_handling: CatchupHandling) {
+        self.catchup = catchup_handling;
+    }
+
+    pub fn player_count(&self) -> usize {
+        self.players.len()
     }
 }
