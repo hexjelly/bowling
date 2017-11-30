@@ -1,15 +1,11 @@
 [package]
 name = "bowling"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["Roger Andersen <hexjelly@hexjelly.com>"]
 
 [lib]
 name = "bowling"
 path = "src/lib.rs"
-
-[[bin]]
-name = "bowling_scorer"
-path = "src/main.rs"
 
 [dependencies]
 failure = { git = "https://github.com/withoutboats/failure" }
