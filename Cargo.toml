@@ -8,5 +8,5 @@ name = "bowling"
 path = "src/lib.rs"
 
 [dependencies]
-failure = { git = "https://github.com/withoutboats/failure" }
-failure_derive = { git = "https://github.com/withoutboats/failure_derive" }
+failure = "0.1.0"
+failure_derive = "0.1.1"
