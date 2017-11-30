@@ -2,6 +2,20 @@
 name = "bowling"
 version = "0.0.1"
 authors = ["Roger Andersen <hexjelly@hexjelly.com>"]
+license = "Apache-2.0"
+
+description = "A crate to deal with bowling scoring."
+documentation = "https://docs.rs/bowling"
+homepage = "https://github.com/hexjelly/bowling"
+repository = "https://github.com/hexjelly/bowling"
+readme = "README.md"
+
+keywords = ["bowling", "scoring", "sport"]
+# categories = ["...", "..."]
+
+[badges]
+travis-ci = { repository = "hexjelly/bowling", branch = "master" }
+coveralls = { repository = "https://github.com/hexjelly/bowling", branch = "master", service = "github" }
 
 [lib]
 name = "bowling"
