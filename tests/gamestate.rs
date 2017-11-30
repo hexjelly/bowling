@@ -1,5 +1,5 @@
-extern crate bowling_scorer;
-use bowling_scorer::GameState;
+extern crate bowling;
+use bowling::GameState;
 
 #[test]
 fn adding_new_players() {

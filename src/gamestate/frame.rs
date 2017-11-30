@@ -1,6 +1,6 @@
 use super::Throw;
 
-#[derive(Debug, Default, Eq, PartialEq)]
+#[derive(Clone, Debug, Default, Eq, PartialEq)]
 pub struct Frame {
     pub(crate) throws: Vec<Throw>,
     pub(crate) points: Option<u32>,

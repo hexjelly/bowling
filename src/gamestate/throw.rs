@@ -14,7 +14,7 @@ pub enum ThrowType {
     Spare,
 }
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Clone, Debug, Eq, PartialEq)]
 pub struct Throw {
     throw_type: ThrowType,
     pin_count: u8,
@@ -51,11 +51,11 @@ impl Throw {
         self.throw_type = throw_type;
     }
 
-    pub fn get_throw_type(&self) -> &ThrowType {
+    pub fn throw_type(&self) -> &ThrowType {
         &self.throw_type
     }
 
-    pub fn get_pin_count(&self) -> u8 {
+    pub fn pin_count(&self) -> u8 {
         self.pin_count
     }
 }

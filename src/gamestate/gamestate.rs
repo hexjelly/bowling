@@ -1,6 +1,7 @@
 use super::Player;
 use super::Throw;
 
+#[derive(Clone)]
 pub enum CatchupHandling {
     Disabled,
     Quick,
@@ -13,7 +14,7 @@ impl Default for CatchupHandling {
     }
 }
 
-#[derive(Default)]
+#[derive(Clone, Default)]
 pub struct GameState {
     players: Vec<Player>,
     catchup: CatchupHandling,
@@ -32,7 +33,7 @@ impl GameState {
         unimplemented!();
     }
 
-    pub fn get_score_as_json(&self) {
+    pub fn to_json(&self) {
         unimplemented!();
     }
 
@@ -44,7 +45,7 @@ impl GameState {
         unimplemented!();
     }
 
-    pub fn get_turn(&self) -> String {
+    pub fn turn(&self) -> &str {
         unimplemented!();
     }
 

@@ -1,5 +1,5 @@
-extern crate bowling_scorer;
-use bowling_scorer::gamestate::*;
+extern crate bowling;
+use bowling::gamestate::*;
 
 #[test]
 fn adding_new_frame() {

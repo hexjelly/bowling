@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "bowling-scorer"
+name = "bowling"
 version = "0.1.0"
 dependencies = [
  "failure 0.0.1 (git+https://github.com/withoutboats/failure)",

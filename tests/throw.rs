@@ -1,5 +1,5 @@
-extern crate bowling_scorer;
-use bowling_scorer::Throw;
+extern crate bowling;
+use bowling::Throw;
 
 #[test]
 fn parser_detects_bad_input() {

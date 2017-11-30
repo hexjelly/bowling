@@ -1,10 +1,10 @@
 [package]
-name = "bowling-scorer"
+name = "bowling"
 version = "0.1.0"
 authors = ["Roger Andersen <hexjelly@hexjelly.com>"]
 
 [lib]
-name = "bowling_scorer"
+name = "bowling"
 path = "src/lib.rs"
 
 [[bin]]

@@ -16,6 +16,7 @@ enum ThrowError {
     UnexpectedStrike,
 }
 
+#[derive(Clone, Default)]
 pub struct Player {
     name: String,
     frames: Vec<Frame>,
@@ -50,5 +51,9 @@ impl Player {
             Some(frame) => frame.add_throw(throw),
             None => unimplemented!(),
         }
+    }
+
+    pub fn name(&self) -> &str {
+        &self.name
     }
 }

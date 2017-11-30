@@ -1,4 +1,4 @@
-extern crate bowling_scorer;
+extern crate bowling;
 
 // use std::io;
 // use std::io::prelude::*;
@@ -6,11 +6,11 @@ extern crate bowling_scorer;
 
 fn main() {
 
-//    loop {
-//        let stdin = io::stdin();
-//        for line in stdin.lock().lines() {
-//            println!("{}", line.unwrap());
-//        }
-//    }
+    //    loop {
+    //        let stdin = io::stdin();
+    //        for line in stdin.lock().lines() {
+    //            println!("{}", line.unwrap());
+    //        }
+    //    }
 
 }
